@@ -29,6 +29,9 @@ int main(void) {
 
 	animal coelho, leopardo;
 
+	printf("Numero de passos: ");
+	scanf("%d", &numeroPassos);
+
 	char *entrada= loadFile("entrada.txt");
 	lerParametros(&coelho, &leopardo, &posicaoInicialCoelho, &posicaoInicialLeopardo, "entrada.txt");
 
@@ -109,6 +112,8 @@ int main(void) {
 	fprintf(fileSaida, "%s", saida);
 	fflush(fileSaida);
 	fclose(fileSaida);
+
+	printf("Arquivo \"saida.wrl\" gerado com sucesso.\n");
 
 	return EXIT_SUCCESS;
 }
